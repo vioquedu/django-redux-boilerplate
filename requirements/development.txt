@@ -1,0 +1,10 @@
+# Local development dependencies go here
+# Test dependencies go here.
+
+##  Selected applications
+-r base.txt
+django-debug-toolbar==1.3.0
+django-debug-panel
+django-extensions==1.5.2
+
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+NAME="{{project.name}}"
+DJANGODIR=/path/to/django_dir/
+SOCKFILE=/path/to/gunicorn.sock
+USER=username
+NUM_WORKERS=3
+DJANGO_SETTINGS_MODULE=config.settings
+DJANGO_WSGI_MODULE=config.wsgi
+
+echo "Starting $NAME as `whoami`"
+
+cd $DJANGODIR
+source /path/to/virtualenv/bin/activate
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR
+
+exec gunicorn ${DJANGO_WSGI_MODULE}:application --name $NAME --workers $NUM_WORKERS --user=$USER --bind=unix:$SOCKFILE --log-level=debug --log-file=-
+

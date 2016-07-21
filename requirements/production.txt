@@ -1,0 +1,5 @@
+# Storages applications
+# Applications
+-r base.txt
+gunicorn==19.3.0
+

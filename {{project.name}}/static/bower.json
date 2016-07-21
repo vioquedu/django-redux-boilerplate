@@ -1,0 +1,20 @@
+{
+  "name": "static",
+  "version": "0.0.0",
+  "authors": [
+    "{{author.name}} <{{author.email}}>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.10.2",
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4"
+  }
+}

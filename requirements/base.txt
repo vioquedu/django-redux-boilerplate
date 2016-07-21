@@ -1,0 +1,24 @@
+# Bleeding edge Django
+django==1.8
+
+# Configuration
+dj-database-url==0.3.0
+dj-mongo-database-url
+django-environ
+djangorestframework
+djangorestframework-jwt
+
+# Forms
+django-braces==1.4.0
+
+# For databases
+psycopg2==2.6
+
+# Time zones support
+pytz==2015.2
+
+# Others
+dealer
+
+# Docs 
+https://github.com/vioquedu/django-docs.git
