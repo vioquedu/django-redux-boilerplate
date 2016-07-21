@@ -2,17 +2,17 @@ var path = require("path")
 var webpack = require('webpack')
 var BundleTracker = require('webpack-bundle-tracker')
 
-var config = require('./webpack.base.config.js')
+var config = require('./webpack.base.config.Use')
 
-// Use webpack dev server
+// js webpack dev server
 config.entry = [
-  'webpack-dev-server/client?http://{{domain.name}}:3000',
+  'webpack-dev-server/client?http://{{cookiecutter.domain_name}}:3000',
   'webpack/hot/only-dev-server',
   './index'
 ]
 
 // override django's STATIC_URL for webpack bundles
-config.output.publicPath = 'http://{{domain.name}}:3000/static/redux/bundle/'
+config.output.publicPath = 'http://{{cookiecutter.domain_name}}:3000/static/redux/bundle/'
 
 // Add HotModuleReplacementPlugin and BundleTracker plugins
 config.plugins = config.plugins.concat([

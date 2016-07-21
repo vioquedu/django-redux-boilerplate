@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME="{{project.name}}"
+NAME="{{cookiecutter.project_name}}"
 DJANGODIR=/path/to/django_dir/
 SOCKFILE=/path/to/gunicorn.sock
 USER=username

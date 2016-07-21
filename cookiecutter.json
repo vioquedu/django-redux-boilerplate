@@ -4,5 +4,6 @@
     "author_name": "author_name",
     "author_email": "author_email",
     "project_timezone": "project_timezone",
-    "language": "language"
+    "language": "language",
+    "domain_name:" "localhost"
 }

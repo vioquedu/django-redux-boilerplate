@@ -65,7 +65,7 @@ class AuthenticatedApp extends Component {
 	<Navbar.Header>
 	  <Navbar.Brand>
 	    <Link to="/">
-	{{project_name}}
+	{{cookiecutter.project_name}}
 	    </Link>
 	  </Navbar.Brand>
 	</Navbar.Header>
