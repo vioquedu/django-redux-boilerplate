@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 var BundleTracker = require('webpack-bundle-tracker')
 
-var config = require('./webpack.base.config.js')
+var config = require('./webpack.base.config')
 
 config.output.path = require('path').resolve('../dist/')
 

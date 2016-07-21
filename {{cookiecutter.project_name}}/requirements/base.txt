@@ -3,7 +3,6 @@ django==1.8
 
 # Configuration
 dj-database-url==0.3.0
-dj-mongo-database-url
 django-environ
 djangorestframework
 djangorestframework-jwt
@@ -19,6 +18,7 @@ pytz==2015.2
 
 # Others
 dealer
+django-webpack-loader
 
 # Docs 
-https://github.com/vioquedu/django-docs.git
+git+https://github.com/vioquedu/django-docs.git

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 import environ
 import os
 import datetime
-from pymongo import MongoClient
 from jinja2 import Environment, FileSystemLoader
 # Load enviroment
 root = environ.Path(__file__) - 2
@@ -135,7 +134,6 @@ MANAGERS = ADMINS
 # DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {'default': env.db() } 
-MONGODB   = MongoClient(env('MONGODB_URL'))
 # END DATABASE CONFIGURATION
     
 # GENERAL CONFIGURATION

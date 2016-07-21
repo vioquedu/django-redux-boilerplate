@@ -15,7 +15,6 @@ urlpatterns = patterns('',
       # User management
       url(r'$', include("apps.common.urls", namespace="common")),
 
-      url(r'^accounts/', include("apps.accounts.urls", namespace="accounts")),
       # Docs
       url(r'^docs/', include('docs.urls')),
 

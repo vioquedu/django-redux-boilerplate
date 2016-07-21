@@ -1,0 +1,48 @@
+# Basics
+*.py[cod]
+*.pyc
+__pycache__
+
+
+# Logs
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+.ipynb_checkpoints/
+# Translations
+*.mo
+*.pot
+
+# Pycharm
+.idea
+
+# Vim
+
+*~
+*.swp
+*.swo
+
+# npm
+node_modules/
+
+# Env
+env_file.py
+
+# Compass
+.sass-cache
+node_modules/
+bundle/
+bower_components/
+dist/
+
+media/
+_build/
+_static/
+_template/
+logs/
+

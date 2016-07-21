@@ -2,7 +2,7 @@ var path = require("path")
 var webpack = require('webpack')
 var BundleTracker = require('webpack-bundle-tracker')
 
-var config = require('./webpack.base.config.Use')
+var config = require('./webpack.base.config')
 
 // js webpack dev server
 config.entry = [
