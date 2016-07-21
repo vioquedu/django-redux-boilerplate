@@ -1,7 +1,7 @@
 
 # -*- coding: utf-8 -*-
 """
-Django settings for {{project.name}} project.
+Django settings for {{project_name}} project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -37,7 +37,7 @@ SITE_ROOT = root()
 
 # Site id
 SITE_ID    = 1
-SITE_NAME = '{{project.name}}'
+SITE_NAME = '{{project_name}}'
     
 # Application definition
 ROOT_URLCONF     = 'config.urls'
@@ -125,7 +125,7 @@ FIXTURE_DIRS = (
 # MANAGER CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = (
-    ("""{{project.author}}""", '{{project.email}}'),
+    ("""{{author_email}}""", '{{author_email}}'),
 )
     
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -144,7 +144,7 @@ MONGODB   = MongoClient(env('MONGODB_URL'))
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = '{{project.timezone}}'
+TIME_ZONE = '{{project_timezone}}'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = '{{language}}'

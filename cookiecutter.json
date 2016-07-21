@@ -1,8 +1,8 @@
 {
-    "project.name": "project.name",
-    "project.slug": "project.slug",
-    "author.name": "author.name",
-    "author.email": "author.email",
-    "project.timezone": "project.timezone",
+    "project_name": "project_name",
+    "project_slug": "project_slug",
+    "author_name": "author_name",
+    "author_email": "author_email",
+    "project_timezone": "project_timezone",
     "language": "language"
 }

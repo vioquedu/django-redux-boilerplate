@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# {{project.name}} documentation build configuration file, created by
+# {{project_name}} documentation build configuration file, created by
 # sphinx-quickstart on Fri Jun 24 15:28:14 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -51,10 +51,10 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-# General information about the project.
-project = '{{project.name}}'
-copyright = '2016, {{project.author}}'
-author = '{{project.author}}'
+# General information about the project_
+project = '{{project_name}}'
+copyright = '2016, {{project_author}}'
+author = '{{project_author}}'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -206,7 +206,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = '{{project.slug}}doc'
+htmlhelp_basename = '{{project_slug}}doc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -228,8 +228,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, '{{project.slug}}.tex', '{{project.name}} Documentation',
-     '{{project.author}}', 'manual'),
+    (master_doc, '{{project_slug}}.tex', '{{project_name}} Documentation',
+     '{{project_author}}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -258,7 +258,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, '{{project.name}}', '{{project.name}} Documentation',
+    (master_doc, '{{project_name}}', '{{project_name}} Documentation',
      [author], 1)
 ]
 
@@ -272,8 +272,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, '{{project.slug}}', '{{project.name}} Documentation',
-     author, '{{project.author}}', 'One line description of project.',
+    (master_doc, '{{project_slug}}', '{{project_name}} Documentation',
+     author, '{{project_author}}', 'One line description of project',
      'Miscellaneous'),
 ]
 
