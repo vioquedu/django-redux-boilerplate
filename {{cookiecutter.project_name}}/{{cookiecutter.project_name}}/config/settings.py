@@ -25,7 +25,6 @@ environ.Env.read_env('config/env_file.py')
 
 # DEBUG
 DEBUG          = env.bool('DEBUG')
-TEMPLATE_DEBUG = DEBUG
 # END DEBUG
 
 # SECRET KEY DEFINITION
@@ -151,27 +150,30 @@ USE_TZ = True
 # END GENERAL CONFIGURATION
 # TEMPLATE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.tz',
-    'django.contrib.messages.context_processors.messages',
-    'django.core.context_processors.request',
-    # Your stuff: custom template context processors go here
-    'apps.common.context_processors.site_info',
-    'dealer.contrib.django.context_processor',
-)
-    
-DEALER_TYPE = 'git'
-DEALER_PATH = os.path.join(BASE_DIR, '../.git/')
-
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-)
+TEMPLATES = [
+    {
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+    'OPTIONS': {
+        'context_processors': [
+            'django.contrib.auth.context_processors.auth',
+            'django.template.context_processors.debug',
+            'django.template.context_processors.i18n',
+            'django.template.context_processors.media',
+            'django.template.context_processors.static',
+            'django.template.context_processors.tz',
+            'django.contrib.messages.context_processors.messages',
+            'django.template.context_processors.request',
+            # Your stuff: custom template context processors go here
+            'apps.common.context_processors.site_info',
+            ],
+        'loaders': [
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+            ]
+        }
+    }
+]
 
 # STATIC FILE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
@@ -255,7 +257,7 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'redux/bundle/', # must end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, 'static/redux/src/webpack-stats.json'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'static/redux/webpack-stats.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
@@ -264,7 +266,7 @@ WEBPACK_LOADER = {
 if not DEBUG:
     WEBPACK_LOADER.update({
         'BUNDLE_DIR_NAME': 'redux/dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'static/redux/src/webpack-stats-prod.json'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'static/redux/webpack-stats-prod.json'),
     })
 
 

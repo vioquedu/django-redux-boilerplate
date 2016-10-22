@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "Redux real-world example",
   "scripts": {
-    "watch": "node server.js",
-    "build": "webpack --progress --colors --config webpack.local.config.js",
-    "build-prod": "webpack --config webpack.prod.config.js --progress --colors"
+    "watch": "node src/server.js",
+    "build": "webpack --progress --colors --config src/webpack.local.config.js",
+    "build-prod": "webpack --config src/webpack.prod.config.js --progress --colors"
   },
   "repository": {
     "type": "git",
