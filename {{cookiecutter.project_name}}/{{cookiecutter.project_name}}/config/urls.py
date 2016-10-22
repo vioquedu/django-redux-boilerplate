@@ -18,6 +18,6 @@ urlpatterns = [
       url(r'^docs/', include('docs.urls')),
 
       # User management
-      url(r'^', include("apps.common.urls", namespace="common")),
+      url(r'', include("apps.common.urls", namespace="common")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
