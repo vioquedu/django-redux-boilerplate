@@ -59,4 +59,4 @@ jwt authentication.
 
 ### Install bower components
 
-        ``bower install``
+	``bower install``
