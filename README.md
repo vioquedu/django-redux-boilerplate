@@ -22,7 +22,7 @@ Django is used for the backend along with the following packages:
 
 2. Create a `env_file.py` inside the `config` folder which should look like this:
 
-   ``
+   ```
    DEBUG=on
    SECRET_KEY=CHANGE_ME!!!!!
    DATABASE_URL=connection_to_database
@@ -30,7 +30,7 @@ Django is used for the backend along with the following packages:
    EMAIL_HOST_USER=your_email@example.com
    EMAIL_PWD=your_pwd
    EMAIL_ADMIN=admin1@example.com,admin2@example.com
-   ``
+   ```
 
 3. Create initial tables in database running:
 
