@@ -31,3 +31,7 @@ jwt authentication.
 2. Use node to serve frontend application:
 
 	``npm run start``
+
+### Install bower components
+
+    ``bower install``

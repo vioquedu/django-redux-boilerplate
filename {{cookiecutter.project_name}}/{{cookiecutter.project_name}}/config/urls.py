@@ -2,16 +2,17 @@
 from __future__ import unicode_literals
 
 from django.conf import settings
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.conf.urls.static import static
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from rest_framework_jwt.views import obtain_jwt_token
 
-urlpatterns = patterns('',
+urlpatterns = [
       # Uncomment the next line to enable the admin:
       url(r'^admin/', include(admin.site.urls)),
-      url(r'^accounts/login/', 'rest_framework_jwt.views.obtain_jwt_token'),
+      url(r'^accounts/login/', obtain_jwt_token),
       # User management
       url(r'$', include("apps.common.urls", namespace="common")),
 
@@ -19,4 +20,4 @@ urlpatterns = patterns('',
       url(r'^docs/', include('docs.urls')),
 
 
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
