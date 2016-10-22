@@ -13,11 +13,11 @@ urlpatterns = [
       # Uncomment the next line to enable the admin:
       url(r'^admin/', include(admin.site.urls)),
       url(r'^accounts/login/', obtain_jwt_token),
-      # User management
-      url(r'', include("apps.common.urls", namespace="common")),
 
       # Docs
       url(r'^docs/', include('docs.urls')),
 
+      # User management
+      url(r'^', include("apps.common.urls", namespace="common")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
