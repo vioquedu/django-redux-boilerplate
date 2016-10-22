@@ -1,5 +1,5 @@
 """
-WSGI config for yoigo_forecast_interface project.
+WSGI config for {{cookiecutter.project_name}} project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable
