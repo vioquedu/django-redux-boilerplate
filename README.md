@@ -12,12 +12,37 @@ Django is used for the backend along with the following packages:
 * django-webpack-loader
 
 ### Installation
+1. Clone repository using cookiecutter
+   	 
+	 ``cookiecutter https://github.com/vioquedu/django-redux-boilerplate.git``
 
-1. Install requirements:
+2. Install requirements:
 
 	``pip install -r requirements/development.txt``
 
-2. Define a `env_file.py` in the inside the `config` folder.
+2. Create a `env_file.py` inside the `config` folder which should look like this:
+
+   ``
+   DEBUG=on
+   SECRET_KEY=CHANGE_ME!!!!!
+   DATABASE_URL=connection_to_database
+   ALLOWED_HOSTS=example.com,www.example.com
+   EMAIL_HOST_USER=your_email@example.com
+   EMAIL_PWD=your_pwd
+   EMAIL_ADMIN=admin1@example.com,admin2@example.com
+   ``
+
+3. Create initial tables in database running:
+
+   ``python manage.py migrate``
+
+4. Create a super user
+
+   ``python manage.py createsuperuser``
+
+5. Start a development server
+
+   ``python manage.py runserver``
 
 ## React-Redux
 
@@ -34,4 +59,4 @@ jwt authentication.
 
 ### Install bower components
 
-    ``bower install``
+        ``bower install``
