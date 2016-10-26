@@ -256,7 +256,7 @@ JINJA_TEMPLATES = Environment(
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
-        'BUNDLE_DIR_NAME': 'static/bundle/', # must end with slash
+        'BUNDLE_DIR_NAME': 'bundle/', # must end with slash
         'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
@@ -264,7 +264,7 @@ WEBPACK_LOADER = {
 }
 
 if not DEBUG:
-  WEBPACK_LOADER['DEFAULT']['BUNDLE_DIR_NAME'] = 'static/dist/'
+  WEBPACK_LOADER['DEFAULT']['BUNDLE_DIR_NAME'] = 'dist/'
   WEBPACK_LOADER['DEFAULT']['STATS_FILE'] = os.path.join(BASE_DIR, 'frontend/webpack-stats-prod.json'),
 
 
