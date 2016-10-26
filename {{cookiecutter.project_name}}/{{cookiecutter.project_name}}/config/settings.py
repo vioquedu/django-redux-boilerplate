@@ -256,8 +256,8 @@ JINJA_TEMPLATES = Environment(
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
-        'BUNDLE_DIR_NAME': 'redux/bundle/', # must end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, 'static/redux/webpack-stats.json'),
+        'BUNDLE_DIR_NAME': 'bundle/', # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend/src/webpack-stats.json'),
         'POLL_INTERVAL': 0.1,
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
@@ -265,8 +265,8 @@ WEBPACK_LOADER = {
 
 if not DEBUG:
     WEBPACK_LOADER.update({
-        'BUNDLE_DIR_NAME': 'redux/dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'static/redux/webpack-stats-prod.json'),
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend/src/webpack-stats-prod.json'),
     })
 
 
