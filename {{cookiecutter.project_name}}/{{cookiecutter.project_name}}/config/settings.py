@@ -265,7 +265,7 @@ WEBPACK_LOADER = {
 
 if not DEBUG:
   WEBPACK_LOADER['DEFAULT']['BUNDLE_DIR_NAME'] = 'dist/'
-  WEBPACK_LOADER['DEFAULT']['STATS_FILE'] = os.path.join(BASE_DIR, 'frontend/webpack-stats-prod.json'),
+  WEBPACK_LOADER['DEFAULT']['STATS_FILE'] = os.path.join(BASE_DIR, 'frontend/webpack-stats-prod.json')
 
 
 
