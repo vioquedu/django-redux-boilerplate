@@ -3,7 +3,7 @@
     "project_slug": "project_slug",
     "author_name": "author_name",
     "author_email": "author_email",
-    "project_timezone": "project_timezone",
-    "language": "language",
+    "project_timezone": "Europe/Madrid",
+    "language": "en-us",
     "domain_name": "localhost"
 }
