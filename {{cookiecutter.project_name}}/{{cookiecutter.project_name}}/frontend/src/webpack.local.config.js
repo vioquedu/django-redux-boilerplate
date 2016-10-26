@@ -12,7 +12,7 @@ config.entry = [
 ]
 
 // override django's STATIC_URL for webpack bundles
-config.output.publicPath = 'http://{{cookiecutter.domain_name}}:3000/static/redux/bundle/'
+config.output.publicPath = 'http://{{cookiecutter.domain_name}}:3000/static/bundle/'
 
 // Add HotModuleReplacementPlugin and BundleTracker plugins
 config.plugins = config.plugins.concat([
