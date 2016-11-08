@@ -1,0 +1,46 @@
+{% raw %}
+{% load render_bundle from webpack_loader %}
+{% load staticfiles %}
+{% endraw %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% raw %}
+      {% block html_title %}
+      {% block section_title %}
+      {% endblock %}
+      {{ site_name }}
+      {% endblock %}
+      {% endraw %}
+    </title>
+    <meta name="description" content="{{ cookiecutter.author_name }}">
+    <meta name="author" content="{{ cookiecutter.author_email }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      {% raw %}
+    <link type="text/css" rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+      {% endraw %}
+
+  </head>
+  <body>
+
+    <div id="root"></div>
+      {% raw %}
+    <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'bower_components/moment/moment.js' %}"></script>
+    <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bower_components/jquery.idle/jquery.idle.min.js' %}"></script>
+
+    {% render_bundle 'main' %}
+
+    {% csrf_token %}
+      {% endraw %}
+
+  </body>
+</html>
+
+
+
