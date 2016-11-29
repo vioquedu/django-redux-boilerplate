@@ -15,7 +15,7 @@ class AuthenticatedApp extends Component {
   componentDidMount() {
     $(document).idle({
       onIdle: this._onIdle.bind(this),
-      idle: 5000
+      idle: 5000*60
     }, this)
       
   }
