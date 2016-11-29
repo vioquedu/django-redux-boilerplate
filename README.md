@@ -4,12 +4,11 @@
 
 Django is used for the backend along with the following packages:
 
-* dj-database-url
-* django-environ
-* djangorestframework
-* djangorestframework-jwt
-* dealer
-* django-webpack-loader
+* [dj-database-url](https://github.com/kennethreitz/dj-database-url)
+* [django-environ](https://github.com/joke2k/django-environ)
+* [djangorestframework](http://www.django-rest-framework.org/)
+* [djangorestframework-jwt](https://github.com/GetBlimp/django-rest-framework-jwt)
+* [django-webpack-loader](https://github.com/owais/django-webpack-loader)
 
 ### Installation
 1. Clone repository using cookiecutter
@@ -57,7 +56,7 @@ jwt authentication.
 
 	``npm run watch``
 
-### Install bower components
+### Finally install bower components
 
 	``bower install``
 
