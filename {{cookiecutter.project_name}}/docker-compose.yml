@@ -1,4 +1,4 @@
-version '2'
+version: '2'
 
 services:
   # PostgreSQL as databse
@@ -20,7 +20,8 @@ services:
       dockerfile: Dockerfile
     hostname: web
     command: ./run_web.sh
-    volumnes: .:/web_app
+    volumes: 
+      - .:/web_app
     ports:
       - "8000:8000"
     links:
