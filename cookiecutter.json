@@ -5,5 +5,8 @@
     "author_email": "author_email",
     "project_timezone": "Europe/Madrid",
     "language": "en-us",
-    "domain_name": "localhost"
+    "domain_name": "localhost",
+    "db_user": "db_user",
+    "db_pwd": "db_pwd",
+    "db_name": "db_name"
 }

@@ -20,7 +20,8 @@ env     = environ.Env()
 
 
 # Read configuration file
-environ.Env.read_env('config/env_file.py')
+# CHANGE THIS FILE AND CREATE A NEW ENV FILE OUTSIDE GIT REPOSITORY
+environ.Env.read_env('config/.env_file.py')
 
 
 # DEBUG
