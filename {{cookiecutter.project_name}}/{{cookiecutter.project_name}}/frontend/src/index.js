@@ -5,7 +5,9 @@ import { browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 import Root from './containers/Root'
 import configureStore from './store/configureStore'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-select/dist/react-select.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 const store = configureStore()
 const history = syncHistoryWithStore(browserHistory, store)

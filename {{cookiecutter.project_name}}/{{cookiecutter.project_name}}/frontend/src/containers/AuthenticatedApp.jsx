@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
+import $ from 'jquery'
+import idle from 'jquery.idle'
 import { connect } from 'react-redux'
 import { Link, browserHistory } from 'react-router'
 import { resetErrorMessage } from '../actions'
