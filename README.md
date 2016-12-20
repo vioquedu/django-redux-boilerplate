@@ -56,7 +56,4 @@ jwt authentication.
 
 	``npm run watch``
 
-### Finally install bower components
-
-	``bower install``
 
