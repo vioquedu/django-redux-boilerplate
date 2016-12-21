@@ -8,5 +8,7 @@
     "domain_name": "localhost",
     "db_user": "db_user",
     "db_pwd": "db_pwd",
-    "db_name": "db_name"
+    "db_name": "db_name",
+    "db_port": "5431",
+    "web_port": "8001"
 }

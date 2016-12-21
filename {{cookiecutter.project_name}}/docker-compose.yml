@@ -10,7 +10,7 @@ services:
       - POSTGRES_PASSWORD={{cookiecutter.db_pwd}}
       - POSTGRES_DB={{cookiecutter.db_name}}
     ports:
-      - "5432:5432"
+      - "{{cookiecutter.db_port}}:5432"
       
 
   # Django web server
@@ -23,7 +23,7 @@ services:
     volumes: 
       - .:/web_app
     ports:
-      - "8000:8000"
+      - "{{cookiecutter.web_port}}:8000"
     links:
       - db
     depends_on:
