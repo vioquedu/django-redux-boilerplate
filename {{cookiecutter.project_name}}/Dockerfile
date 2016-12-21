@@ -3,6 +3,7 @@ FROM python:3.5
 
 # add requirements.txt to the image
 ADD requirements/development.txt /web_app/development.txt
+ADD requirements/base.txt /web_app/base.txt
 
 # set working directory to /web_app/
 WORKDIR /web_app/
