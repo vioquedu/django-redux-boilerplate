@@ -18,7 +18,7 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+      {test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=100000' },
       {test: /\.js$/, loader: 'imports?jQuery=jquery,$=jquery,this=>window'}
     ] // add all common loaders here
   },
