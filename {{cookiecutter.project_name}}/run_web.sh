@@ -1,6 +1,6 @@
 #!/bin/sh
 # wait for PSQL server to start
-sleep 1
+sleep 10
 
 cd {{cookiecutter.project_name}}
 # prepare init migration
