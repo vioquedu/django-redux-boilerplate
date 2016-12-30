@@ -30,16 +30,16 @@ services:
       - db
 
   # Node container
-  #node:
-  #  build: 
-  #    context: .
-  #    dockerfile: Dockerfile.node
-  #  hostname: node
-  #  volumes:
-  #    - ./{{cookiecutter.project_name}}/frontend/:/web_app/
-  #  links:
-  #    - web
-  #  ports:
-  #    "3000:3000"
+  node:
+    build: 
+      context: .
+      dockerfile: Dockerfile.node
+    hostname: node
+    volumes:
+      - ./{{cookiecutter.project_name}}/frontend/:/web_app/
+    links:
+      - web
+    ports:
+      "3000:3000"
   
       

@@ -1,0 +1,14 @@
+# use node Image 
+FROM node:argon
+
+# Add package.json
+ADD "{{cookiecutter.project_name}}/frontend/package.json /web_app/frontend/package.json
+
+# Set working dir to /app/src/js
+WORKDIR /web_app/
+
+# Install dependencies
+RUN npm install
+
+# Start node server
+CMD ["npm", "start"]
